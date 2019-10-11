@@ -13,6 +13,10 @@ header nav {
 	/*text-align: center;*/
 	margin-left: 220px;
 }
+header nav input{
+	/*text-align: center;*/
+	margin-left: 220px;
+}
 header nav ul li{
 	border-bottom: 1px solid lightgray;
 	color: lightgray;
