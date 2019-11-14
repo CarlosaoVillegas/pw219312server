@@ -11,10 +11,16 @@ app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'vistas'))
 
 //Middleware
-//app.use()
+app.use(myConnection(mysql,{
+	host: 'localhost',
+	user: 'root',
+	password: '',
+	port: 8080,
+	database: 'crudnodejsmysql'
+},'single'));
+
 //usamos las rutas 
 app.use('/',indiceRutas);
-
 
 app.listen(app.get('port'),() => {
 	console.log('Esuchando en el puerto 3000');
