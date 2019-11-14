@@ -1,8 +1,12 @@
 const express = require ('express');
 const rutas = express.Router();
 
-rutas.get('/', (req,res)=>{
-	res.send("hola node");
-});
+const customerController = require('../controllers/customersControllers');
+
+//rutas.get('/', (req,res)=>{
+//	res.send("hola node");
+//});
+
+rutas.get('/',customersControllers.list);
 
 module.exports = rutas;
